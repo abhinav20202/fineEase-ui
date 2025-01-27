@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/login.css">
+  <title>Login Page</title>
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+    </div>
+    <div class="right-section">
+      <h1>FINEASE</h1>
+      <div class="login-box">
+        <!-- Login Form -->
+        <form id="loginForm" onsubmit="redirectToPage(event)">
+          <h2>LOGIN TO YOUR ACCOUNT</h2>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <button type="submit">LOGIN</button>
+          <p class="toggle-link">Don't have an account? <a id="showSignup" href="#">Sign Up now</a></p>
+        </form>
+
+        <!-- Signup Form -->
+        <form id="signupForm" onsubmit="redirectToOverview(event)" style="display: none;">
+            <h2>Create an Account</h2>
+            <label for="signupUsername">Username</label>
+            <input type="text" id="signupUsername" name="signupUsername" required>
+            <label for="signupEmail">Email Address</label>
+            <input type="email" id="signupEmail" name="signupEmail" required>
+            <label for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" name="signupPassword" required>
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <button type="submit">SIGN UP</button>
+            <p>Already have an account? <a href="#" id="showLogin">Login Now</a></p>
+          </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="../scripts/login.js"></script>
+</body>
+</html>
